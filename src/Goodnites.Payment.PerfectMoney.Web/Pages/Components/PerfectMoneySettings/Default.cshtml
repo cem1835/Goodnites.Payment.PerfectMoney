@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using Volo.Abp.SettingManagement.Localization
+@inject IHtmlLocalizer<AbpSettingManagementResource> L
+@model Goodnites.Payment.PerfectMoney.Dto.PerfectMoneySettingsDto
+
+
+<form id="PerfectMoneySettings">
+    <abp-row>
+        <abp-column size-md="_12">
+            <div>
+                <abp-input asp-for="PerfectUserId" label="@L["UserId"].Value"></abp-input>
+                <abp-input asp-for="PassPhrase" label="@L["Pass Phrase"].Value"></abp-input>
+                <abp-input asp-for="Min" label="@L["Perfect Money Min"].Value"></abp-input>
+                <abp-input asp-for="Max" label="@L["Perfect Money Max"].Value"></abp-input>
+            </div>
+            <hr class="my-4"/>
+            <div>
+                <abp-button button-type="Primary" type="submit">
+                    <i class="fa fa-save"></i> @L["Save"]
+                </abp-button>
+            </div>
+        </abp-column>
+    </abp-row>
+</form>

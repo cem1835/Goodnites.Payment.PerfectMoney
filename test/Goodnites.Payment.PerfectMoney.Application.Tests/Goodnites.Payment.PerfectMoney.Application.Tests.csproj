@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Goodnites.Payment.PerfectMoney</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Goodnites.Payment.PerfectMoney.Application\Goodnites.Payment.PerfectMoney.Application.csproj" />
+    <ProjectReference Include="..\Goodnites.Payment.PerfectMoney.Domain.Tests\Goodnites.Payment.PerfectMoney.Domain.Tests.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,22 @@
+﻿@page
+@using Microsoft.Extensions.Hosting.Internal
+@model Goodnites.Payment.PerfectMoney.Web.Pages.PerfectMoney.Redirect
+
+
+<form action="https://perfectmoney.is/api/step1.asp" id="pForm" style="display:none" method="post">
+    <input type="hidden" name="PAYEE_ACCOUNT" value="@Model.RequestModel.PayeeAccount">
+    <input type="hidden" name="PAYEE_NAME" value="@HttpContext.Request.Host">
+    <input type="hidden" name="PAYMENT_ID" value="@Model.RequestModel.PaymentId">
+    <input type="text" name="PAYMENT_AMOUNT" value="@Model.RequestModel.PaymentAmount"><BR>
+    <input type="hidden" name="PAYMENT_UNITS" value="USD">
+    <input type="hidden" name="STATUS_URL" value="">
+    <input type="hidden" name="PAYMENT_URL" value="@("https://" + HttpContext.Request.Host + "/PerfectMoney/Success")">
+    <input type="hidden" name="NOPAYMENT_URL" value="@("https://" + HttpContext.Request.Host + "/PerfectMoney/Fail")">
+    
+    <input type="submit" name="PAYMENT_METHOD" value="Pay">
+</form>
+
+
+<script type="text/javascript">
+     document.getElementById('pForm').submit();
+ </script>

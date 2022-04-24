@@ -1,0 +1,12 @@
+﻿using Goodnites.Payment.PerfectMoney.Samples;
+
+namespace Goodnites.Payment.PerfectMoney.EntityFrameworkCore.Samples
+{
+    public class SampleRepository_Tests : SampleRepository_Tests<PerfectMoneyEntityFrameworkCoreTestModule>
+    {
+        /* Don't write custom repository tests here, instead write to
+         * the base class.
+         * One exception can be some specific tests related to EF core.
+         */
+    }
+}
